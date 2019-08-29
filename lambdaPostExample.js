@@ -2,7 +2,7 @@ var https = require('https');
 /***
 Lambda function to post the data to Power BI whenever the event occurs 
 ***/
-exports.handler = function(event, context) {
+exports.handler = async (event, context) => {
 
     var body=event.Records;
     var jsonObject = JSON.stringify(event);
